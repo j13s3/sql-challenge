@@ -30,10 +30,10 @@ CREATE TABLE Employees (
 
 -- Each employee can belong to MORE THAN one depatment
 CREATE TABLE Dept_Employees (
-    dept_no VARCHAR   NOT NULL,
     emp_no INT   NOT NULL,
-    FOREIGN KEY (dept_no) REFERENCES Departments (dept_no),
-    FOREIGN KEY (emp_no) REFERENCES Employees (emp_no)
+    dept_no VARCHAR   NOT NULL,
+    FOREIGN KEY (emp_no) REFERENCES Employees (emp_no),
+    FOREIGN KEY (dept_no) REFERENCES Departments (dept_no)
 );
 
 -- Each manager is assigned ONLY one department

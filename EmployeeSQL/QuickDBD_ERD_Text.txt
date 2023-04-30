@@ -13,14 +13,14 @@ title VARCHAR
 # Each employee can belong to MORE THAN one depatment
 Dept_Employees
 -
-dept_no VARCHAR FK >- Departments.dept_no
 emp_no INT FK >- Employees.emp_no
+dept_no VARCHAR FK >- Departments.dept_no
 
 # Each manager is assigned ONLY one department
 Dept_Managers
 -
 dept_no VARCHAR FK >- Departments.dept_no
-emp_no INT FK - Dept_Employees.emp_no
+emp_no INT FK - Employees.emp_no
 
 Employees
 -
